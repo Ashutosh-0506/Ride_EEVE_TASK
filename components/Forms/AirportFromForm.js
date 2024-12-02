@@ -42,13 +42,21 @@ const AirportFromForm = () => {
       {/* Pickup Details */}
       <div className={styles.formGroup}>
         <label>
-          Pickup Location:
-          <input
-            type="text"
-            name="pickupLocation"
-            placeholder="Enter pickup location"
-          />
-        </label>
+            Pickup Location:
+            <select name="pickupLocation" required>
+              <option value="">Select Pickup Location</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Pune">Pune</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Lucknow">Lucknow</option>
+            </select>
+          </label>
         <label>
           Pickup Date:
           <input type="date" name="pickupDate" />
