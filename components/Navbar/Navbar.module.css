@@ -1,0 +1,247 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow added to navbar */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1; /* Allow the logo section to take available space */
+}
+
+.hamburgerButton {
+  display: none; /* Hidden hamburger for now, visible on mobile */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.username {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  justify-content: flex-start;
+}
+
+.searchInput {
+  width: 100%; /* Make input take full available width */
+  max-width: 400px; /* Set max-width to 400px */
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.searchButton:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+}
+
+.icons img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 10px;
+  }
+
+  .logoContainer {
+    gap: 15px;
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center;
+  }
+
+  .hamburgerButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .username {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .searchInput {
+    width: 70%;
+    max-width: 300px; /* Set max-width on mobile to fit better */
+  }
+
+  .searchButton {
+    margin-left: 5px;
+  }
+
+  .icons {
+    justify-content: space-around;
+    gap: 10px;
+  }
+}
+
+/* Responsive design for mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .logoContainer {
+    gap: 10px;
+    flex-direction: column; /* Stack logo and username vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburgerButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .search {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .searchInput {
+    width: 60%; /* Adjust width of search input */
+    max-width: 250px; /* Smaller max-width for mobile */
+  }
+
+  .searchButton {
+    margin-left: 5px;
+  }
+
+  .icons {
+    display: none; /* Hide icons on small mobile screens */
+  }
+
+  .username {
+    font-size: 14px; /* Smaller font size for mobile */
+    margin-left: 0;
+  }
+}
+
+/* Responsive design for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px; /* Adjust padding for tablet */
+  }
+
+  .logoContainer {
+    gap: 15px;
+    flex-direction: column; /* Stack logo and username vertically */
+    align-items: center;
+  }
+
+  .hamburgerButton {
+    display: block;
+    cursor: pointer;
+    padding: 12px;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .searchInput {
+    width: 70%; /* Search input takes more space */
+    max-width: 350px; /* Slightly larger max-width */
+  }
+
+  .searchButton {
+    margin-left: 5px;
+  }
+
+  .icons {
+    display: flex; /* Show icons */
+    justify-content: flex-end;
+    gap: 15px;
+  }
+
+  .username {
+    font-size: 14px; /* Font size smaller for tablets */
+    margin-left: 0;
+  }
+}
+
+/* Responsive design for laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px; /* Add more padding for laptops */
+  }
+
+  .logoContainer {
+    gap: 20px;
+    flex-direction: row; /* Keep logo and username side by side */
+    align-items: center;
+  }
+
+  .hamburgerButton {
+    display: none; /* Hide hamburger on larger screens */
+  }
+
+  .search {
+    width: 50%;
+    justify-content: flex-start;
+  }
+
+  .searchInput {
+    width: 80%; /* Ensure search input is sufficiently wide */
+    max-width: 400px; /* Max-width for search */
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .username {
+    font-size: 16px; /* Regular font size for laptops */
+    margin-left: 10px;
+  }
+}

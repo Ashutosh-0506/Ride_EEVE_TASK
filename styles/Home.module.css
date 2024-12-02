@@ -1,0 +1,353 @@
+/* Reset some default browser styles */
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  cursor: pointer;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Allow the container to grow based on content */
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Main Content Layout */
+.main {
+  display: flex;
+  flex: 1;
+  overflow: auto; /* Allow content section to scroll if it overflows */
+}
+
+/* Sidebar Section */
+.sidebar {
+  width: 264px;
+  background-color: #e9f5e9;
+  border-right: 1px solid #d4d4d4;
+  padding: 10px;
+  overflow-y: auto; /* Allow sidebar content to scroll */
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebarItem:hover {
+  background-color: #d8edd8;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.arrow {
+  width: 6px;
+  height: 3px;
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-left: 1px solid #d4d4d4;
+  overflow-y: auto; /* Allow content to scroll when necessary */
+  min-height: 0; /* Allow flexibility */
+}
+
+/* Navbar Section */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  font-size: 18px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.userName {
+  font-size: 16px;
+  color: #555555;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInput {
+  width: 60%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Forms Section */
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9f5e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.form input[type='checkbox'],
+.form input[type='radio'] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* FareDetails Section */
+.fareDetails {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-left: 20px;
+  width: 320px;
+  overflow-y: auto;
+  max-height: 500px; /* Limit the height */
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stage {
+  padding: 10px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.active {
+  background: #4caf50;
+  color: white;
+}
+
+.details h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.separator {
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.inclusions,
+.exclusions {
+  margin-top: 20px;
+}
+
+.inclusions h4,
+.exclusions h4 {
+  font-size: 16px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.inclusions div,
+.exclusions div {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Add Scroll and Flexible Height for Fare Details */
+.fareDetails {
+  overflow-y: auto; /* Allow scrolling when content exceeds height */
+  max-height: 500px; /* Limit the height */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    height: auto; /* Allow scrolling if content overflows */
+  }
+
+  .main {
+    overflow: auto; /* Enable scrolling for main section */
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .content {
+    order: 1; /* Make content come first (form) */
+    flex: 1;
+    padding: 15px;
+  }
+
+  .fareDetails {
+    order: 2; /* Move fare form below the content */
+    width: 100%; /* Adjust width for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .sidebar {
+    width: 240px; /* Reduced sidebar width */
+  }
+
+  .sidebarItem {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .searchInput {
+    width: 80%; /* Expand search input on smaller screens */
+  }
+
+  .progress {
+    flex-direction: column; /* Stack progress stages vertically */
+    gap: 10px; /* Add gap between stages */
+  }
+
+  .stage {
+    width: 100%; /* Ensure stages fill available width */
+    text-align: left; /* Align stage text to the left */
+  }
+
+  .row {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .userInfo {
+    margin-top: 10px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .fareDetails {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%; /* Full width for mobile */
+    padding: 5px; /* Less padding for mobile */
+  }
+
+  .sidebarItem {
+    padding: 10px; /* Smaller padding for compact design */
+  }
+}

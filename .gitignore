@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+
+# Logs
+*.log
+logs/
+*.gz
+
+# Environment Variables
+.env
+.env.*.local
+
+# IDE Specific
+.vscode/
+.idea/
+.DS_Store
+
+# System Files
+Thumbs.db
